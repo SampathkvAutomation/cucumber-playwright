@@ -1,10 +1,18 @@
 Cucumber Playwright Automation Framework
+
 This repository provides a robust automation framework that integrates:
-    • Web UI Automation using Playwright
-    • API Automation using Playwright
-    • Behavior-Driven Development (BDD) with Cucumber.js
+
+    â€¢ Web UI Automation using Playwright
+    
+    â€¢ API Automation using Playwright
+    
+    â€¢ Behavior-Driven Development (BDD) with Cucumber.js
+    
 The framework is built with Node.js and TypeScript, promoting modularity, scalability, and ease of maintenance.
+
+
 Project Structure
+
 
 ??? .vscode/                 # VSCode configurations
 ??? Pageobjects/             # Page Object Models
@@ -29,15 +37,23 @@ Project Structure
 ??? package.json             # Project dependencies and scripts
 ??? renovate.json            # Renovate configuration
 ??? tsconfig.json            # TypeScript configuration
-    • Behavior-Driven Development (BDD): Write human-readable test scenarios using Gherkin syntax.
-    • Cross-Browser Testing: Execute tests across Chromium, Firefox, and WebKit browsers.
-    • Modular Architecture: Implement Page Object Model (POM) for reusable and organized code.
-    • Environment Configuration: Manage different environments using .env files.
-    • Comprehensive Reporting: Generate detailed reports and capture screenshots on test failures.
-    • Code Quality Tools: Maintain code standards using ESLint and Prettier.
+
+
+    â€¢ Behavior-Driven Development (BDD): Write human-readable test scenarios using Gherkin syntax.
+    
+    â€¢ Cross-Browser Testing: Execute tests across Chromium, Firefox, and WebKit browsers.
+    
+    â€¢ Modular Architecture: Implement Page Object Model (POM) for reusable and organized code.
+
+    
+    â€¢ Environment Configuration: Manage different environments using .env files.
+
+    
+    â€¢ Comprehensive Reporting: Generate detailed reports and capture screenshots on test failures.
+    â€¢ Code Quality Tools: Maintain code standards using ESLint and Prettier.
 Ensure the following tools are installed on your system:
-    • Node.js (v14 )
-    • npm
+    â€¢ Node.js (v14 )
+    â€¢ npm
 Installation
     1. Clone the Repository
        
@@ -52,35 +68,35 @@ Installation
        
        npx playwright install
  Running Tests
-    • Execute All Tests
+    â€¢ Execute All Tests
 
 
   npx cucumber-js
-    • Run Specific Feature File
+    â€¢ Run Specific Feature File
 
 
   npx cucumber-js features/your-feature-file.feature
-    • Run Tests with Specific Tags
+    â€¢ Run Tests with Specific Tags
 
   npx cucumber-js --tags "@yourTag"
-    • Run Tests in Headed Mode
+    â€¢ Run Tests in Headed Mode
 
   npx cucumber-js --world-parameters '{"headless": false}'
  Reporting
-    • Generate HTML Reports
+    â€¢ Generate HTML Reports
       After test execution, reports are available in the reports/ directory.
-    • View Reports
+    â€¢ View Reports
       Open the generated HTML report in your browser to review test results.
  Configuration
-    • Cucumber Configuration: Customize settings in cucumber.js for test directories, timeouts, reporters, etc.
-    • TypeScript Configuration: Adjust compiler options in tsconfig.json as needed.
-    • Prettier Configuration: Maintain code formatting standards using .prettierrc.
-    • ESLint Configuration: Enforce code quality using eslint.config.js.
+    â€¢ Cucumber Configuration: Customize settings in cucumber.js for test directories, timeouts, reporters, etc.
+    â€¢ TypeScript Configuration: Adjust compiler options in tsconfig.json as needed.
+    â€¢ Prettier Configuration: Maintain code formatting standards using .prettierrc.
+    â€¢ ESLint Configuration: Enforce code quality using eslint.config.js.
  Best Practices
-    • Page Object Model (POM): Structure your page interactions within the Pageobjects/ directory for reusability.
-    • Environment Variables: Manage sensitive data and environment-specific settings using .env files.
-    • Logging and Debugging: Utilize Playwright's tracing and video recording features for debugging.
-    • Continuous Integration: Integrate with CI tools like GitHub Actions, Jenkins, or GitLab CI for automated testing pipelines.
+    â€¢ Page Object Model (POM): Structure your page interactions within the Pageobjects/ directory for reusability.
+    â€¢ Environment Variables: Manage sensitive data and environment-specific settings using .env files.
+    â€¢ Logging and Debugging: Utilize Playwright's tracing and video recording features for debugging.
+    â€¢ Continuous Integration: Integrate with CI tools like GitHub Actions, Jenkins, or GitLab CI for automated testing pipelines.
 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 License
