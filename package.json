@@ -1,0 +1,67 @@
+{
+  "name": "founda-automation-ui-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "cucumber": "tsx node_modules/@cucumber/cucumber/bin/cucumber.js",
+    "api": "DEBUG=pw:api npm run cucumber",
+    "build": "rimraf build && npm run format && npm run lint && tsc && npm run cucumber-check",
+    "cucumber-check": "npm run cucumber features/**/*.feature --dry-run --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\" --format summary --format progress --format progress-bar  --publish-quiet",
+    "debug": "PWDEBUG=1 DEBUG=pw:api npm run cucumber ",
+    "video": "PWVIDEO=1 npm run cucumber ",
+    "format": "prettier --write \"**/*.{ts,tsx,css,html}\" ",
+    "lint": "eslint",
+    "fileupload": "npm run cucumber -- --tags @fileupload",
+    "report": "open reports/report.html",
+    "snippets": "npm run cucumber  features/**/*.feature --dry-run --format snippets",
+    "steps-usage": "tsx node_modules/@cucumber/cucumber/bin/cucumber.js features/**/*.feature --dry-run",
+    "all": "npm run cucumber features/**/*.feature",
+    "test": "npm run cucumber ",
+    "test:parallel": "npm run cucumber  --parallel=2",
+    "docker": "docker run --rm --network host -v $(pwd):/work/ -w /work/ -it mcr.microsoft.com/playwright:latest /bin/bash",
+    "allure": "allure serve reports/allure-results"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Sampath K V",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "@babel/plugin-transform-typescript": "^7.27.1",
+    "@cucumber/cucumber": "11.2.0",
+    "@cucumber/html-formatter": "21.10.1",
+    "@cucumber/messages": "27.2.0",
+    "@cucumber/pretty-formatter": "1.0.1",
+    "@playwright/test": "1.52.0",
+    "@types/fs-extra": "11.0.4",
+    "@types/node": "22.15.3",
+    "@types/pixelmatch": "5.2.6",
+    "@types/pngjs": "6.0.5",
+    "allure-commandline": "~2.31.0",
+    "allure-cucumberjs": "^3.2.2",
+    "allure-playwright": "~3.0.5",
+    "cross-env": "^7.0.3",
+    "cucumber-html-reporter": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "fs-extra": "11.3.0",
+    "multiple-cucumber-html-reporter": "3.9.2",
+    "open": "10.1.2",
+    "pixelmatch": "7.1.0",
+    "pngjs": "7.0.0",
+    "prettier": "3.5.3",
+    "rimraf": "6.0.1",
+    "ts-node": "10.9.2",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}
